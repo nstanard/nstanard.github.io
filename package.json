@@ -12,7 +12,9 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy:public": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy:main": "gatsby build && gh-pages -d public -b main"
   },
   "license": "0BSD",
   "dependencies": {
@@ -36,6 +38,7 @@
     "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.4.1"
   }
