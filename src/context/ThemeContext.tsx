@@ -9,6 +9,8 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+const DEFAULT = '#7e22ce';
+
 const getInitialColor = () => {
   if (typeof window !== 'undefined') {
     const savedColor = localStorage.getItem('color');
@@ -16,7 +18,7 @@ const getInitialColor = () => {
       return savedColor;
     }
   }
-  return '#7e22ce'; // Default color with better contrast
+  return DEFAULT; // Default color with better contrast
 };
 
 const getInitialDarkMode = () => {
@@ -82,7 +84,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    return {
+      isDark: true,
+      setIsDark: () => {},
+      color: DEFAULT,
+      setColor: () => {},
+    }
   }
   return context;
-}; 
+};
