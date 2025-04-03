@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const onRenderBody = ({ setHeadComponents }) => {
+export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
+  setBodyAttributes({
+    className: 'dark'
+  });
+
   setHeadComponents([
     <link
       key="favicon-svg"
