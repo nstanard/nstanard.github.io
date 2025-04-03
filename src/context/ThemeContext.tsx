@@ -9,64 +9,21 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const DEFAULT = '#7e22ce';
-
-const getInitialColor = () => {
-  if (typeof window !== 'undefined') {
-    const savedColor = localStorage.getItem('color');
-    if (savedColor) {
-      return savedColor;
-    }
-  }
-  return DEFAULT; // Default color with better contrast
-};
-
-const getInitialDarkMode = () => {
-  if (typeof window !== 'undefined') {
-    const savedDarkMode = localStorage.getItem('dark-mode');
-    if (savedDarkMode !== null) {
-      return savedDarkMode === 'true';
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-  return true;
-};
+const DEFAULT = '#065f46';
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isDark, setIsDark] = useState(getInitialDarkMode);
-  const [color, setColor] = useState(getInitialColor);
+  const [isDark, setIsDark] = useState(true);
+  const [color, setColor] = useState(DEFAULT);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('dark-mode', isDark.toString());
-      document.documentElement.classList.toggle('dark', isDark);
-    }
-  }, [isDark]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('color', color);
-      document.documentElement.style.setProperty('--primary-color', color);
-    }
-  }, [color]);
-
-  // Add script to prevent flash of wrong theme
+  // Add script to set the primary color and dark mode
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const script = document.createElement('script');
       script.innerHTML = `
         (function() {
           try {
-            var mode = localStorage.getItem('dark-mode');
-            var color = localStorage.getItem('color');
-            if (mode === 'true' || (!mode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-              document.documentElement.classList.add('dark');
-            }
-            if (color) {
-              document.documentElement.style.setProperty('--primary-color', color);
-            } else {
-              document.documentElement.style.setProperty('--primary-color', '#7e22ce');
-            }
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.setProperty('--primary-color', '${DEFAULT}');
           } catch (e) {}
         })();
       `;
