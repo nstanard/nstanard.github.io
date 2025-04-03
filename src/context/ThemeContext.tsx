@@ -9,11 +9,11 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const DEFAULT = '#065f46';
+export const DEFAULT_COLOR = '#065f46';
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isDark, setIsDark] = useState(true);
-  const [color, setColor] = useState(DEFAULT);
+  const [color, setColor] = useState(DEFAULT_COLOR);
 
   // Add script to set the primary color and dark mode
   useEffect(() => {
@@ -23,7 +23,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         (function() {
           try {
             document.documentElement.classList.add('dark');
-            document.documentElement.style.setProperty('--primary-color', '${DEFAULT}');
+            document.documentElement.style.setProperty('--primary-color', '${DEFAULT_COLOR}');
           } catch (e) {}
         })();
       `;
@@ -44,7 +44,7 @@ export const useTheme = () => {
     return {
       isDark: true,
       setIsDark: () => {},
-      color: DEFAULT,
+      color: DEFAULT_COLOR,
       setColor: () => {},
     }
   }

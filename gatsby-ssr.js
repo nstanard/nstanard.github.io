@@ -1,8 +1,10 @@
 import React from 'react';
+import { DEFAULT_COLOR } from './src/context/ThemeContext';
 
 export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
   setBodyAttributes({
-    className: 'dark'
+    className: 'dark',
+    style: `--primary-color: ${DEFAULT_COLOR};`
   });
 
   setHeadComponents([
