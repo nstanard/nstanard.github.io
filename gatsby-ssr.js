@@ -4,7 +4,9 @@ import { DEFAULT_COLOR } from './src/context/ThemeContext';
 export const onRenderBody = ({ setHeadComponents, setBodyAttributes }) => {
   setBodyAttributes({
     className: 'dark',
-    style: `--primary-color: ${DEFAULT_COLOR};`
+    style: {
+      '--primary-color': DEFAULT_COLOR
+    }
   });
 
   setHeadComponents([
