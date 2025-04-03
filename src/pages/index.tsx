@@ -43,14 +43,14 @@ const IndexPage = () => {
               About Me
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              I'm a passionate software engineer with expertise in web development and modern technologies.
+              I'm a passionate software engineer with a broad range of skills and experience in web development and modern technologies.
               I love building beautiful, responsive, and user-friendly applications that solve real-world problems.
             </p>
             <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
               <div className="border-l-4 border-primary-600 pl-6">
                 <h3 className="text-base font-semibold leading-7 text-gray-900 dark:text-dark-text">Skills</h3>
                 <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
-                  JavaScript, TypeScript, React,{' '}
+                  JavaScript, TypeScript, React, CSS, HTML, AWS, GCP,{' '}
                   <Link to="/resume" className="text-primary-500 dark:text-primary-400 hover:underline">
                     and more...
                   </Link>
@@ -60,7 +60,7 @@ const IndexPage = () => {
               <div className="border-l-4 border-primary-600 pl-6">
                 <h3 className="text-base font-semibold leading-7 text-gray-900 dark:text-dark-text">Experience</h3>
                 <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
-                  Building modern web applications and delivering high-quality software solutions
+                  Delivering scalable web solutions and innovative applications that drive business growth and enhance user experiences.
                 </p>
               </div>
             </div>
