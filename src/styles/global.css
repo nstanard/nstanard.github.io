@@ -89,6 +89,11 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
+
+  a {
+    /* text-decoration: underline; */
+    text-underline-offset: 0.125rem;
+  }
 }
 
 @layer components {
@@ -97,7 +102,7 @@
   }
 
   .prose a {
-    @apply text-primary-500 dark:text-primary-300 no-underline hover:underline;
+    @apply text-primary-500 dark:text-primary-300 underline hover:underline;
   }
 
   .prose h1, .prose h2, .prose h3, .prose h4 {

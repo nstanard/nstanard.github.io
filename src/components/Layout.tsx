@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+// import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 import { useTheme } from '../context/ThemeContext';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { isDark, setIsDark } = useTheme();
   const isCurrentPath = (path: string) => {
+    console.log('path', path);
+    console.log('window.location.pathname', window.location.pathname);  
     if (typeof window !== 'undefined') {
       return window.location.pathname === path;
     }
@@ -14,8 +15,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    // { name: 'Portfolio', path: '/portfolio' },
-    // { name: 'Blog', path: '/blog' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Resume', path: '/resume' },
   ];
 
@@ -45,7 +46,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   {item.name}
                 </Link>
               ))}
-              <button
+              {/* <button
                 onClick={() => setIsDark(!isDark)}
                 className="inline-flex items-center p-1.5 text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-300"
                 aria-label="Toggle dark mode"
@@ -55,7 +56,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 ) : (
                   <MoonIcon className="h-5 w-5" />
                 )}
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
