@@ -20,7 +20,7 @@ const ResumePage = () => {
       school: "University of Nebraska at Omaha",
       degree: "Bachelor of Science in IT Innovation",
       period: "2010 - 2014",
-      description: "Focus on entrepreneurship, product management, and software engineering.",
+      description: "Focus on software engineering, entrepreneurship, and product management.",
     },
     // Add more education
   ]
