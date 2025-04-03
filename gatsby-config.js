@@ -8,6 +8,7 @@ module.exports = {
     description: `Software engineer and tech enthusiast sharing insights on web development, programming best practices, and personal projects. Explore my portfolio and technical blog posts.`,
     author: `Neal Stanard`,
     siteUrl: `https://nealstanard.com`,
+    icon: `/favicon.svg`,
   },
   plugins: [
     'gatsby-plugin-postcss',

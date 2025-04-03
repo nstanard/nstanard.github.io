@@ -56,6 +56,7 @@ const IndexPage = () => {
                   </Link>
                 </p>
               </div>
+
               <div className="border-l-4 border-primary-600 pl-6">
                 <h3 className="text-base font-semibold leading-7 text-gray-900 dark:text-dark-text">Experience</h3>
                 <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
