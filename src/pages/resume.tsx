@@ -4,14 +4,12 @@ import Layout from "../components/Layout"
 const ResumePage = () => {
   const experience = [
     {
-      company: "Company Name",
-      position: "Senior Software Engineer",
-      period: "2022 - Present",
-      description: "Led development of multiple web applications using React and Node.js. Implemented CI/CD pipelines and improved deployment processes.",
+      company: "The Routing Company",
+      position: "Staff Software Engineer",
+      period: "September 2022 - Present, Remote",
+      description: "TODO",
       achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Implemented new features that increased user engagement by 25%",
-        "Mentored junior developers and led technical discussions",
+        "todo",
       ],
     },
     // Add more experiences
@@ -19,18 +17,18 @@ const ResumePage = () => {
 
   const education = [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      period: "2018 - 2022",
-      description: "Focus on software engineering and web development",
+      school: "University of Nebraska at Omaha",
+      degree: "Bachelor of Science in IT Innovation",
+      period: "2010 - 2014",
+      description: "Focus on entrepreneurship, product management, and software engineering.",
     },
     // Add more education
   ]
 
   const skills = {
-    technical: ["JavaScript", "TypeScript", "React", "Node.js", "GraphQL", "AWS"],
-    tools: ["Git", "Docker", "Jenkins", "Jira"],
-    soft: ["Leadership", "Communication", "Problem Solving"],
+    technical: ["JavaScript", "TypeScript", "React", "GraphQL",  "GCP", "AWS", "Terraform", "Go", "SQL", "NoSQL", "Firebase"],
+    tools: ["Git", "Docker", "Jenkins", "Jira", "Auth0", "Twilio", "Postman"],
+    soft: ["Leadership", "Communication", "Problem Solving", "Teamwork"],
   }
 
   return (
@@ -43,7 +41,7 @@ const ResumePage = () => {
                 Resume
               </h2>
               <a
-                href="/resume.pdf"
+                href="/Neal Stanard - Resume.pdf"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                 target="_blank"
                 rel="noopener noreferrer"

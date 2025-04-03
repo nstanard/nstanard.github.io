@@ -22,7 +22,7 @@ const IndexPage = () => {
           Hi, I'm Neal Stanard
         </h1>
         {/* Color picker is for debugging/design purposes only */}
-        <div className="flex flex-col items-center space-y-4">
+        {/* <div className="flex flex-col items-center space-y-4">
           <div className="flex flex-col items-center space-y-4">
             <HexColorPicker 
               color={color} 
@@ -33,7 +33,7 @@ const IndexPage = () => {
               Current: {color}
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="py-24 sm:py-32">
@@ -50,9 +50,9 @@ const IndexPage = () => {
               <div className="border-l-4 border-primary-600 pl-6">
                 <h3 className="text-base font-semibold leading-7 text-gray-900 dark:text-dark-text">Skills</h3>
                 <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
-                  JavaScript, TypeScript, React, Node.js, Gatsby, Next.js,{' '}
+                  JavaScript, TypeScript, React,{' '}
                   <Link to="/resume" className="text-primary-500 dark:text-primary-400 hover:underline">
-                    and more
+                    and more...
                   </Link>
                 </p>
               </div>
