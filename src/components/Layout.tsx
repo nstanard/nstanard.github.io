@@ -5,18 +5,16 @@ import { useTheme } from '../context/ThemeContext';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const isCurrentPath = (path: string) => {
-    console.log('path', path);
-    console.log('window.location.pathname', window.location.pathname);  
     if (typeof window !== 'undefined') {
-      return window.location.pathname === path;
+      return window.location.pathname === path || window.location.pathname === path + '/';
     }
     return false;
   };
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Blog', path: '/blog' },
+    // { name: 'Portfolio', path: '/portfolio' },
+    // { name: 'Blog', path: '/blog' },
     { name: 'Resume', path: '/resume' },
   ];
 
