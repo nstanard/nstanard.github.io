@@ -69,7 +69,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </div>
         </div>
       </nav>
-      <main className="flex-grow pt-12 min-h-[calc(100dvh-3rem)]">
+      <main className="min-h-screen pt-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 h-full">
           {children}
         </div>
