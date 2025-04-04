@@ -23,7 +23,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-dark-bg">
+    <div className="flex flex-col min-h-[100dvh] bg-white dark:bg-dark-bg">
       <nav className="fixed w-full bg-white dark:bg-dark-card border-b border-gray-200 dark:border-dark-border z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-end h-12">
