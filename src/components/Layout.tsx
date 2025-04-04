@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-// import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
-import { useTheme } from '../context/ThemeContext';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const isCurrentPath = (path: string) => {
     console.log('path: ', path);
     if (typeof window !== 'undefined') {
-      console.log('window: ', window?.location?.pathname);
+      console.log('window.location.pathname: ', window?.location?.pathname);
       return window.location.pathname === path || window.location.pathname === path + '/';
     } else {
       console.error('window is undefined');
@@ -63,8 +61,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </div>
         </div>
       </nav>
-      <main className="flex-grow pt-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="flex-grow pt-12 min-h-[calc(100dvh-3rem)]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 h-full">
           {children}
         </div>
       </main>
