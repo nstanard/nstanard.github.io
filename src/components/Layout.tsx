@@ -5,10 +5,10 @@ import { useTheme } from '../context/ThemeContext';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const isCurrentPath = (path: string) => {
-    console.log(path);
+    console.log('path: ', path);
     if (typeof window !== 'undefined') {
-    console.log(window?.location?.pathname);
-    return window.location.pathname === path || window.location.pathname === path + '/';
+      console.log('window: ', window?.location?.pathname);
+      return window.location.pathname === path || window.location.pathname === path + '/';
     } else {
       console.error('window is undefined');
     }
