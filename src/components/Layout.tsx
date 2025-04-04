@@ -5,6 +5,8 @@ import { useTheme } from '../context/ThemeContext';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const isCurrentPath = (path: string) => {
+    console.log(window.location.pathname);
+    console.log(path);
     if (typeof window !== 'undefined') {
       return window.location.pathname === path || window.location.pathname === path + '/';
     }
