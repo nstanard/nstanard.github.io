@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const isCurrentPath = (path: string) => {
-    console.log('path: ', path, path.length);
+  const [currentPath, setCurrentPath] = useState<string>('');
+
+  useEffect(() => {
     if (typeof window !== 'undefined') {
-      console.log('window.location.pathname: ', window?.location?.pathname, window?.location?.pathname.length);
-      return window.location.pathname === path || window.location.pathname === path + '/';
-    } else {
-      console.error('window is undefined');
+      setCurrentPath(window.location.pathname);
     }
-    return false;
+  }, []);
+
+  const isCurrentPath = (path: string) => {
+    if (typeof window === 'undefined') {
+      return false;
+    }
+    
+    return currentPath === path || currentPath === path + '/';
   };
 
   const navItems = [
@@ -33,19 +38,24 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </Link>
             </div> */}
             <div className="flex items-center space-x-4 sm:ml-6 sm:space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`inline-flex items-center px-1 text-sm font-medium ${
-                    isCurrentPath(item.path)
-                      ? 'text-primary-500 dark:text-primary-300'
-                      : 'text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-300'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isCurrent = isCurrentPath(item.path);
+                console.log('isCurrent: ', isCurrent);
+
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`inline-flex items-center px-1 text-sm font-medium ${
+                      isCurrent
+                        ? 'text-primary-500 dark:text-primary-300'
+                        : 'text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-300'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              })}
               {/* <button
                 onClick={() => setIsDark(!isDark)}
                 className="inline-flex items-center p-1.5 text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-300"
