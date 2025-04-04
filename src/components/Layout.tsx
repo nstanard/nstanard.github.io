@@ -34,7 +34,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 </span>
               </Link>
             </div> */}
-            <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
+            <div className="flex items-center space-x-4 sm:ml-6 sm:space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
