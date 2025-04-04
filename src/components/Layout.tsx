@@ -40,8 +40,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div className="flex items-center space-x-4 sm:ml-6 sm:space-x-8">
               {navItems.map((item) => {
                 const isCurrent = isCurrentPath(item.path);
-                console.log('isCurrent: ', isCurrent);
-
                 return (
                   <Link
                     key={item.path}
