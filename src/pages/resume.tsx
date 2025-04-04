@@ -12,7 +12,15 @@ const ResumePage = () => {
         "todo",
       ],
     },
-    // Add more experiences
+    {
+      company: "EDS/SparkPost/Bird",
+      position: "Senior Software Engineer",
+      period: "August 2016 - September 2022, Remote",
+      description: "TODO",
+      achievements: [
+        "todo",
+      ],
+    },
   ]
 
   const education = [
@@ -22,12 +30,11 @@ const ResumePage = () => {
       period: "2010 - 2014",
       description: "Focus on software engineering, entrepreneurship, and product management.",
     },
-    // Add more education
   ]
 
   const skills = {
     technical: ["JavaScript", "TypeScript", "React", "GraphQL",  "GCP", "AWS", "Terraform", "Go", "SQL", "NoSQL", "Firebase"],
-    tools: ["Git", "Docker", "Jenkins", "Jira", "Auth0", "Twilio", "Postman"],
+    tools: ["Git", "Docker", "Jenkins", "Jira", "Auth0", "Twilio", "Postman", "Ngrok"],
     soft: ["Leadership", "Communication", "Problem Solving", "Teamwork"],
   }
 
