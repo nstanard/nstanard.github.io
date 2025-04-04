@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { Link } from 'gatsby';
+import { FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 
 const colorOptions = [
   { value: 'emerald', label: 'Emerald', class: 'bg-emerald-500' },
@@ -17,6 +18,35 @@ const IndexPage = () => {
         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-dark-text">
           Hi, I'm Neal Stanard
         </h1>
+        <div className="flex justify-center space-x-8 py-8">
+          <a
+            href="https://github.com/nstanard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-dark-text transition-colors"
+            aria-label="GitHub Profile"
+          >
+            {React.createElement(FaGithub, { className: "h-8 w-8" })}
+          </a>
+          <a
+            href="https://linkedin.com/in/neal-stanard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-dark-text transition-colors"
+            aria-label="LinkedIn Profile"
+          >
+            {React.createElement(FaLinkedin, { className: "h-8 w-8" })}
+          </a>
+          <a
+            href="https://stackoverflow.com/users/3700171/nstanard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-dark-text transition-colors"
+            aria-label="Stack Overflow Profile"
+          >
+            {React.createElement(FaStackOverflow, { className: "h-8 w-8" })}
+          </a>
+        </div>
       </div>
 
       <div className="py-24 sm:py-32">
