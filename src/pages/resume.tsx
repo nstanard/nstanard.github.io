@@ -8,9 +8,9 @@ const ResumePage = () => {
       companyUrl: "https://theroutingcompany.com",
       position: "Staff Software Engineer",
       period: "September 2022 - Present, Remote",
-      description: "TODO",
+      description: "The Routing Company, a global SaaS company, provides software to transit companies to streamline dispatcher, driver, and rider operational excellence.",
       achievements: [
-        "todo",
+        "Engineered a proprietary daily timeline interface (called “The Hub” https://rb.gy/xly4b2) implementing custom zooming, dragging, and scrolling features to enhance user interactions, leveraging React and Typescript in less than six weeks.",
       ],
     },
     {
@@ -18,9 +18,9 @@ const ResumePage = () => {
       companyUrl: "https://www.sparkpost.com",
       position: "Senior Software Engineer",
       period: "August 2016 - September 2022, Remote",
-      description: "TODO",
+      description: "The SparkPost platform, trusted to deliver 40% of all commercial emails worldwide, allows users to send and optimize emails.",
       achievements: [
-        "todo",
+        "Main responsibilities involved working with designers and stakeholders to build features using modern best practices in web development.",
       ],
     },
   ]
@@ -30,7 +30,7 @@ const ResumePage = () => {
       school: "University of Nebraska at Omaha",
       degree: "Bachelor of Science in IT Innovation",
       period: "2010 - 2014",
-      description: "Focus on software engineering, entrepreneurship, and product management.",
+      description: "Software engineering, entrepreneurship, and product management.",
     },
   ]
 
