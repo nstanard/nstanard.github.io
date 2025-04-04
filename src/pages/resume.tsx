@@ -5,6 +5,7 @@ const ResumePage = () => {
   const experience = [
     {
       company: "The Routing Company",
+      companyUrl: "https://theroutingcompany.com",
       position: "Staff Software Engineer",
       period: "September 2022 - Present, Remote",
       description: "TODO",
@@ -14,6 +15,7 @@ const ResumePage = () => {
     },
     {
       company: "EDS/SparkPost/Bird",
+      companyUrl: "https://www.sparkpost.com",
       position: "Senior Software Engineer",
       period: "August 2016 - September 2022, Remote",
       description: "TODO",
@@ -67,7 +69,20 @@ const ResumePage = () => {
                       <div className="absolute -left-[6px] top-0 w-2.5 h-2.5 rounded-full bg-primary-600" />
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 dark:text-dark-text">{job.position}</h4>
-                        <p className="text-sm text-primary-600 dark:text-primary-400">{job.company}</p>
+                        <p className="text-sm text-primary-600 dark:text-primary-400">
+                          {job.companyUrl ? (
+                            <a 
+                              href={job.companyUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:underline"
+                            >
+                              {job.company}
+                            </a>
+                          ) : (
+                            job.company
+                          )}
+                        </p>
                         <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{job.period}</p>
                         <p className="mt-4 text-gray-600 dark:text-gray-400">{job.description}</p>
                         <ul className="mt-4 list-disc list-inside space-y-2">
