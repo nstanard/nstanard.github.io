@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const isCurrentPath = (path: string) => {
-    console.log('path: ', path);
+    console.log('path: ', path, path.length);
     if (typeof window !== 'undefined') {
-      console.log('window.location.pathname: ', window?.location?.pathname);
+      console.log('window.location.pathname: ', window?.location?.pathname, window?.location?.pathname.length);
       return window.location.pathname === path || window.location.pathname === path + '/';
     } else {
       console.error('window is undefined');
