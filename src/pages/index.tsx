@@ -1,8 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { Link } from 'gatsby';
-import { useTheme } from '../context/ThemeContext';
-import { HexColorPicker } from 'react-colorful';
 
 const colorOptions = [
   { value: 'emerald', label: 'Emerald', class: 'bg-emerald-500' },
@@ -13,27 +11,12 @@ const colorOptions = [
 ];
 
 const IndexPage = () => {
-  const { color, setColor } = useTheme();
-
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center py-24 sm:py-32 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-dark-text">
           Hi, I'm Neal Stanard
         </h1>
-        {/* Color picker is for debugging/design purposes only */}
-        {/* <div className="flex flex-col items-center space-y-4">
-          <div className="flex flex-col items-center space-y-4">
-            <HexColorPicker 
-              color={color} 
-              onChange={setColor}
-              className="!w-48 !h-48"
-            />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
-              Current: {color}
-            </span>
-          </div>
-        </div> */}
       </div>
 
       <div className="py-24 sm:py-32">

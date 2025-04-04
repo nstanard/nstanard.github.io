@@ -1,6 +1,5 @@
 import * as React from "react"
 import Layout from "../components/Layout"
-import { StaticImage } from "gatsby-plugin-image"
 
 // You can replace these with your actual projects
 const projects = [
