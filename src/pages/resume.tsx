@@ -10,7 +10,7 @@ const ResumePage = () => {
       period: "September 2022 - Present, Remote",
       description: "The Routing Company, a global SaaS company, provides software to transit companies to streamline dispatcher, driver, and rider operational excellence.",
       achievements: [
-        "Engineered a proprietary daily timeline interface (called “The Hub” https://rb.gy/xly4b2) implementing custom zooming, dragging, and scrolling features to enhance user interactions, leveraging React and Typescript in less than six weeks.",
+        "Engineered a proprietary daily timeline interface (called 'The Hub' https://rb.gy/xly4b2) implementing custom zooming, dragging, and scrolling features to enhance user interactions, leveraging React and Typescript in less than six weeks.",
         "Planned and led an ongoing team-wide test coverage initiative to promote a more scalable and reliable web platform resulting in an expanded automated test coverage from 5 to 70 percent.",
         "Advocated for, planned, and built a custom alerting and monitoring system to notify developers when users encounter bugs on the UI, supporting The Routing Company regularly achieving high availability beyond 99.9%.",
         "Developed a custom UI library leveraging React Aria, Styled Components, and Storybook to increase the speed of feature building by over 25 percent.",
@@ -119,7 +119,14 @@ const ResumePage = () => {
                       <div className="absolute -left-[6px] top-0 w-2.5 h-2.5 rounded-full bg-primary-600" />
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 dark:text-dark-text">{edu.degree}</h4>
-                        <a href={edu.schoolUrl} target="_blank" rel="noopener noreferrer" className="underline">{edu.school}</a>
+                        <a 
+                          href={edu.schoolUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-primary-600 dark:text-primary-400 underline"
+                        >
+                          {edu.school}
+                        </a>
                         <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{edu.period}</p>
                         <p className="mt-4 text-gray-600 dark:text-gray-400">{edu.description}</p>
                       </div>
