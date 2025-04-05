@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-pages-blog-index-tsx","path":"/blog/","result":{"data":{"allMdx":{"nodes":[{"id":"d3a03b7e-1b8d-5ac0-b82c-eed9ab3c916b","frontmatter":{"title":"Hello World","date":"March 08, 2024","description":"My first blog post using Gatsby and MDX"},"fields":{"slug":"/hello-world/"}}]}},"pageContext":{}},"staticQueryHashes":[],"slicesMap":{}}
