@@ -9,12 +9,14 @@ module.exports = {
     author: `Neal Stanard`,
     siteUrl: `https://nealstanard.com`,
     icon: `/favicon.svg`,
+    image: `/og-image.jpg`,
   },
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
