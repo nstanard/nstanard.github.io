@@ -15,7 +15,7 @@ interface BlogPostProps {
       };
     };
     previous: {
-      fields: {
+      fields?: {
         slug: string;
       };
       frontmatter: {
@@ -23,7 +23,7 @@ interface BlogPostProps {
       };
     } | null;
     next: {
-      fields: {
+      fields?: {
         slug: string;
       };
       frontmatter: {
@@ -56,7 +56,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
         </MDXProvider>
         <hr className="my-8" />
         <nav className="flex justify-between">
-          {previous && (
+          {previous?.fields?.slug && (
             <Link
               to={`/blog${previous.fields.slug}`}
               className="text-primary-600 dark:text-primary-400 hover:underline"
@@ -65,7 +65,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
               ← {previous.frontmatter.title}
             </Link>
           )}
-          {next && (
+          {next?.fields?.slug && (
             <Link
               to={`/blog${next.fields.slug}`}
               className="text-primary-600 dark:text-primary-400 hover:underline"

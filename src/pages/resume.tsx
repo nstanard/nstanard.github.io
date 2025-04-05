@@ -42,13 +42,14 @@ const ResumePage = () => {
       degree: "Bachelor of Science in IT Innovation",
       period: "2010 - 2014",
       description: "Software engineering, entrepreneurship, and product management.",
+      schoolUrl: "https://www.unomaha.edu/",
     },
   ]
 
   const skills = {
-    technical: ["JavaScript", "TypeScript", "React", "GraphQL",  "GCP", "AWS", "Terraform", "Go", "SQL", "NoSQL", "Firebase"],
-    tools: ["Git", "Docker", "Jenkins", "Jira", "Auth0", "Twilio", "Postman", "Ngrok", "Auth0"],
-    soft: ["Leadership", "Communication", "Problem Solving", "Teamwork"],
+    technical: ["JavaScript", "TypeScript", "React", "Angular", "GraphQL",  "GCP", "AWS", "Terraform", "Go", "SQL", "NoSQL"],
+    tools: ["Firebase", "Git", "Docker", "Jenkins", "Jira", "Twilio", "Postman", "Ngrok", "Auth0"],
+    soft: ["Communication", "Problem Solving", "Teamwork", "Leadership"],
   }
 
   return (
@@ -86,7 +87,7 @@ const ResumePage = () => {
                               href={job.companyUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="hover:underline"
+                              className="underline"
                             >
                               {job.company}
                             </a>
@@ -118,7 +119,7 @@ const ResumePage = () => {
                       <div className="absolute -left-[6px] top-0 w-2.5 h-2.5 rounded-full bg-primary-600" />
                       <div>
                         <h4 className="text-lg font-semibold text-gray-900 dark:text-dark-text">{edu.degree}</h4>
-                        <p className="text-sm text-primary-600 dark:text-primary-400">{edu.school}</p>
+                        <a href={edu.schoolUrl} target="_blank" rel="noopener noreferrer" className="underline">{edu.school}</a>
                         <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{edu.period}</p>
                         <p className="mt-4 text-gray-600 dark:text-gray-400">{edu.description}</p>
                       </div>

@@ -23,6 +23,11 @@ html, body {
   flex: 1 0 auto;
 }
 
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+}
+
 :root {
   /* Default theme (emerald) */
   --primary-50: #ecfdf5;

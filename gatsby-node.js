@@ -5,11 +5,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === 'Mdx') {
-    const value = createFilePath({ node, getNode });
+    const value = createFilePath({ node, getNode, basePath: 'content/blog' });
     createNodeField({
       name: 'slug',
       node,
-      value,
+      value: value.replace(/\/index$/, ''),
     });
   }
 };
