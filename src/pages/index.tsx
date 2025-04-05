@@ -64,7 +64,7 @@ const IndexPage = () => {
                 <h3 className="text-base font-semibold leading-7 text-gray-900 dark:text-dark-text">Skills</h3>
                 <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-400">
                   JavaScript, TypeScript, React, Go, CSS, HTML, AWS, GCP,{' '}
-                  <Link to="/resume" className="text-primary-500 dark:text-primary-400 hover:underline">
+                  <Link to="/resume" className="text-primary-500 dark:text-primary-400 underline">
                     and more...
                   </Link>
                 </p>
