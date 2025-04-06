@@ -16,7 +16,7 @@ const ResumePage = () => {
         "Developed a custom UI library leveraging React Aria, Styled Components, and Storybook to increase the speed of feature building by over 25%.",
         "Implemented an automated process for Mac environment setup, utilizing shell scripts to streamline and standardize workflow configurations across teams, saving on-boarding time by over 50%.",
         "Spearheaded the implementation of a 'global drawers' feature in the TRC dashboard, enhancing user experience and providing quick actions for users, increasing the NPS score of the dashboard into the 9-10 range.",
-        "Mentored and taught fellow engineers about a11y, Cypress, Jest, and different testing strategies."
+        "Led knowledge-sharing initiatives and mentored team members on accessibility standards, testing methodologies (Cypress, Jest), and best practices, fostering a culture of technical excellence."
       ],
     },
     {
