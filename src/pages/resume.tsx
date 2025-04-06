@@ -16,7 +16,8 @@ const ResumePage = () => {
         "Developed a custom UI library leveraging React Aria, Styled Components, and Storybook to increase the speed of feature building by over 25%.",
         "Implemented an automated process for Mac environment setup, utilizing shell scripts to streamline and standardize workflow configurations across teams, saving on-boarding time by over 50%.",
         "Spearheaded the implementation of a 'global drawers' feature in the TRC dashboard, enhancing user experience and providing quick actions for users, increasing the NPS score of the dashboard into the 9-10 range.",
-        "Led knowledge-sharing initiatives and mentored team members on accessibility standards, testing methodologies (Cypress, Jest), and best practices, fostering a culture of technical excellence."
+        "Led knowledge-sharing initiatives and mentored team members on accessibility standards, testing methodologies (Cypress, Jest), and best practices, fostering a culture of technical excellence.",
+        "Demonstrated exceptional ownership by proactively squashing bugs and implementing improvements beyond assigned tasks, resulting in enhanced customer satisfaction and product reliability."
       ],
     },
     {
@@ -48,8 +49,8 @@ const ResumePage = () => {
   ]
 
   const skills = {
-    technical: ["JavaScript", "TypeScript", "Node", "React", "Cypress", "Jest", "TDD", "a11y", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "NoSQL"],
-    tools: ["NPM", "Firebase", "Git/GitHub", "Docker", "Storybook", "Vite", "Webpack", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD"],
+    technical: ["JavaScript", "TypeScript", "Node", "React", "Cypress", "Jest", "TDD", "a11y", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "PostgreSQL", "NoSQL"],
+    tools: ["NPM", "Firebase", "Git/GitHub", "Docker", "Storybook", "Vite", "Webpack", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD", "Slack"],
     soft: ["Communication", "Problem Solving", "Teamwork", "Leadership"],
   }
 
