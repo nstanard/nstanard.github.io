@@ -10,7 +10,7 @@ const ResumePage = () => {
       period: "September 2022 - Present, Remote",
       description: "The Routing Company, a global SaaS company, provides software to transit companies to streamline dispatcher, driver, and rider operational excellence.",
       achievements: [
-        "Engineered a proprietary daily timeline interface (called 'The Hub' https://rb.gy/xly4b2) implementing custom zooming, dragging, and scrolling features to enhance user interactions, leveraging React and Typescript in less than six weeks.",
+        <>Engineered a proprietary daily timeline interface (called 'The Hub' <a href="https://rb.gy/xly4b2" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 underline">https://rb.gy/xly4b2</a>) implementing custom zooming, dragging, and scrolling features to enhance user interactions, leveraging React and Typescript in less than six weeks.</>,
         "Planned and led an ongoing team-wide test coverage initiative to promote a more scalable and reliable web platform resulting in an expanded automated test coverage from 5 to 70 percent.",
         "Advocated for, planned, and built a custom alerting and monitoring system to notify developers when users encounter bugs on the UI, supporting The Routing Company regularly achieving high availability beyond 99.9%.",
         "Developed a custom UI library leveraging React Aria, Styled Components, and Storybook to increase the speed of feature building by over 25%.",
@@ -48,7 +48,7 @@ const ResumePage = () => {
 
   const skills = {
     technical: ["JavaScript", "TypeScript", "React", "Cypress", "Jest", "TDD", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "NoSQL"],
-    tools: ["Firebase", "Git", "Docker", "Storybook", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD"],
+    tools: ["Firebase", "Git/GitHub", "Docker", "Storybook", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD"],
     soft: ["Communication", "Problem Solving", "Teamwork", "Leadership"],
   }
 
@@ -87,7 +87,7 @@ const ResumePage = () => {
                               href={job.companyUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="underline"
+                              className="text-primary-600 dark:text-primary-400 underline"
                             >
                               {job.company}
                             </a>
