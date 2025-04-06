@@ -17,7 +17,8 @@ const ResumePage = () => {
         "Implemented an automated process for Mac environment setup, utilizing shell scripts to streamline and standardize workflow configurations across teams, saving on-boarding time by over 50%.",
         "Spearheaded the implementation of a 'global drawers' feature in the TRC dashboard, enhancing user experience and providing quick actions for users, increasing the NPS score of the dashboard into the 9-10 range.",
         "Led knowledge-sharing initiatives and mentored team members on accessibility standards, testing methodologies (Cypress, Jest), and best practices, fostering a culture of technical excellence.",
-        "Demonstrated exceptional ownership by proactively squashing bugs and implementing improvements beyond assigned tasks, resulting in enhanced customer satisfaction and product reliability."
+        "Demonstrated exceptional ownership by proactively squashing bugs and implementing improvements beyond assigned tasks, resulting in enhanced customer satisfaction and product reliability.",
+        "Established and maintained a comprehensive style guide for the front-end component library, ensuring design consistency and improving developer productivity.",
       ],
     },
     {
