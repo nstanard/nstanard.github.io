@@ -19,6 +19,7 @@ const ResumePage = () => {
         "Led knowledge-sharing initiatives and mentored team members on accessibility standards, testing methodologies (Cypress, Jest), and best practices, fostering a culture of technical excellence.",
         "Demonstrated exceptional ownership by proactively squashing bugs and implementing improvements beyond assigned tasks, resulting in enhanced customer satisfaction and product reliability.",
         "Established and maintained a comprehensive style guide for the front-end component library, ensuring design consistency and improving developer productivity.",
+        "Architected and implemented an auto-scaling Twilio proxy system to facilitate secure, scalable communication between riders and drivers, ensuring phone number privacy for legal and security compliance while enhancing the e2e user experience."
       ],
     },
     {
@@ -50,9 +51,9 @@ const ResumePage = () => {
   ]
 
   const skills = {
-    technical: ["JavaScript", "TypeScript", "Node", "React", "Cypress", "Jest", "TDD", "a11y", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "PostgreSQL", "NoSQL"],
-    tools: ["NPM", "Firebase", "Git/GitHub", "Docker", "Storybook", "Vite", "Webpack", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD", "Slack"],
-    soft: ["Communication", "Problem Solving", "Teamwork", "Leadership"],
+    technical: ["JavaScript", "TypeScript", "Node", "React", "Cypress", "Jest", "TDD", "a11y", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "NoSQL"],
+    tools: ["NPM", "Firebase/Firestore", "Git/GitHub", "Docker", "Storybook", "Vite", "Webpack", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD", "Slack"],
+    soft: ["Teamwork", "Collaboration", "Leadership", "Troubleshooting", "Problem Solving", "Bug Squashing", "Communication"],
   }
 
   return (
@@ -193,4 +194,4 @@ const ResumePage = () => {
 
 export default ResumePage
 
-export const Head = () => <title>Resume | Neal Stanard</title> 
+export const Head = () => <title>Resume | Neal Stanard</title>
