@@ -15,7 +15,8 @@ const ResumePage = () => {
         "Advocated for, planned, and built a custom alerting and monitoring system to notify developers when users encounter bugs on the UI, supporting The Routing Company regularly achieving high availability beyond 99.9%.",
         "Developed a custom UI library leveraging React Aria, Styled Components, and Storybook to increase the speed of feature building by over 25%.",
         "Implemented an automated process for Mac environment setup, utilizing shell scripts to streamline and standardize workflow configurations across teams, saving on-boarding time by over 50%.",
-        "Spearheaded the implementation of a 'global drawers' feature in the TRC dashboard, enhancing user experience and providing quick actions for users, increasing the NPS score of the dashboard into the 9-10 range."
+        "Spearheaded the implementation of a 'global drawers' feature in the TRC dashboard, enhancing user experience and providing quick actions for users, increasing the NPS score of the dashboard into the 9-10 range.",
+        "Mentored and taught fellow engineers about a11y, Cypress, Jest, and different testing strategies."
       ],
     },
     {
@@ -47,7 +48,7 @@ const ResumePage = () => {
   ]
 
   const skills = {
-    technical: ["JavaScript", "TypeScript", "Node", "React", "Cypress", "Jest", "TDD", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "NoSQL"],
+    technical: ["JavaScript", "TypeScript", "Node", "React", "Cypress", "Jest", "TDD", "a11y", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "NoSQL"],
     tools: ["NPM", "Firebase", "Git/GitHub", "Docker", "Storybook", "Vite", "Webpack", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD"],
     soft: ["Communication", "Problem Solving", "Teamwork", "Leadership"],
   }
