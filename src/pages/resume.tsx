@@ -13,7 +13,7 @@ const ResumePage = () => {
         "Engineered a proprietary daily timeline interface (called 'The Hub' https://rb.gy/xly4b2) implementing custom zooming, dragging, and scrolling features to enhance user interactions, leveraging React and Typescript in less than six weeks.",
         "Planned and led an ongoing team-wide test coverage initiative to promote a more scalable and reliable web platform resulting in an expanded automated test coverage from 5 to 70 percent.",
         "Advocated for, planned, and built a custom alerting and monitoring system to notify developers when users encounter bugs on the UI, supporting The Routing Company regularly achieving high availability beyond 99.9%.",
-        "Developed a custom UI library leveraging React Aria, Styled Components, and Storybook to increase the speed of feature building by over 25 percent.",
+        "Developed a custom UI library leveraging React Aria, Styled Components, and Storybook to increase the speed of feature building by over 25%.",
         "Implemented an automated process for Mac environment setup, utilizing shell scripts to streamline and standardize workflow configurations across teams, saving on-boarding time by over 50%.",
         "Spearheaded the implementation of a 'global drawers' feature in the TRC dashboard, enhancing user experience and providing quick actions for users, increasing the NPS score of the dashboard into the 9-10 range."
       ],
@@ -48,7 +48,7 @@ const ResumePage = () => {
 
   const skills = {
     technical: ["JavaScript", "TypeScript", "React", "Angular", "GraphQL",  "GCP", "AWS", "Terraform", "Go", "SQL", "NoSQL"],
-    tools: ["Firebase", "Git", "Docker", "Jenkins", "Jira", "Twilio", "Postman", "Ngrok", "Auth0"],
+    tools: ["Firebase", "Git", "Docker", "Jenkins", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite"],
     soft: ["Communication", "Problem Solving", "Teamwork", "Leadership"],
   }
 
