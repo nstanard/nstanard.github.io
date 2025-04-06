@@ -48,7 +48,7 @@ const ResumePage = () => {
 
   const skills = {
     technical: ["JavaScript", "TypeScript", "Node", "React", "Cypress", "Jest", "TDD", "GraphQL", "GCP", "AWS", "Terraform", "Flutter", "Dart", "Angular", "Go", "Java", "SQL", "NoSQL"],
-    tools: ["NPM", "Firebase", "Git/GitHub", "Docker", "Storybook", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD"],
+    tools: ["NPM", "Firebase", "Git/GitHub", "Docker", "Storybook", "Vite", "Webpack", "Jira", "Twilio", "Postman", "Ngrok", "Auth0", "CoPilot", "Cursor", "Ollama", "Vim", "VSCode", "Figma", "Adobe Suite", "Jenkins", "CircleCI", "CI/CD"],
     soft: ["Communication", "Problem Solving", "Teamwork", "Leadership"],
   }
 
