@@ -35,7 +35,8 @@ const ResumePage = () => {
         "Revamped the user interface of the SparkPost dashboard using React, Redux, and a custom component library known as Matchbox.",
         "Authored comprehensive documentation and training materials for the SparkPost application, improving onboarding efficiency and reducing new developer ramp-up time by 25%.",
         "Championed the migration of legacy JavaScript codebases to a modern React/TypeScript/Redux MVC architecture, cutting development time for new features by 50% and improving overall code maintainability.",
-        "Maintained WebPack configuration and local developer tooling, ensuring a smooth development experience for the team."
+        "Maintained WebPack configuration and local developer tooling, ensuring a smooth development experience for the team.",
+        "Managed infrastructure as code practices using Terraform for front-end systems on Amazon Web Services, enhancing deployment and scaling efficiency."
       ],
     },
   ]
