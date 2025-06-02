@@ -21,8 +21,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    // { name: 'Portfolio', path: '/portfolio' },
-    // { name: 'Blog', path: '/blog' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Portfolio', path: '/portfolio' },
     { name: 'Resume', path: '/resume' },
   ];
 

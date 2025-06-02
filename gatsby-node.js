@@ -25,6 +25,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           fields {
             slug
           }
+          internal {
+            contentFilePath
+          }
         }
       }
     }
@@ -43,7 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: `/blog${post.fields.slug}`,
-        component: path.resolve('./src/templates/blog-post.tsx'),
+        component: `${path.resolve('./src/templates/blog-post.tsx')}?__contentFilePath=${post.internal.contentFilePath}`,
         context: {
           id: post.id,
           previousPostId,
@@ -52,4 +55,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       });
     });
   }
-}; 
+};

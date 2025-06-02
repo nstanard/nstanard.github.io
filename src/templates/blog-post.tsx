@@ -13,6 +13,7 @@ interface BlogPostProps {
         date: string;
         description: string;
       };
+      body: string;
     };
     previous: {
       fields?: {
@@ -40,20 +41,22 @@ const components = {
 } as Record<string, ComponentType<any>>;
 
 const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
-  const { mdx, previous, next } = data;
+  const { mdx: post, previous, next } = data;
 
   return (
     <Layout>
       <article className="prose dark:prose-invert max-w-none">
         <header className="mb-8">
-          <h1 className="mb-2">{mdx.frontmatter.title}</h1>
+          <h1 className="mb-2 text-gray-900 dark:text-gray-100">{post.frontmatter.title}</h1>
           <p className="text-gray-500 dark:text-gray-400">
-            {mdx.frontmatter.date}
+            {post.frontmatter.date}
           </p>
         </header>
+
         <MDXProvider components={components}>
           {children}
         </MDXProvider>
+
         <hr className="my-8" />
         <nav className="flex justify-between">
           {previous?.fields?.slug && (
@@ -87,6 +90,7 @@ export const query = graphql`
     $nextPostId: String
   ) {
     mdx(id: { eq: $id }) {
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
