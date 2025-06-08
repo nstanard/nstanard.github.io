@@ -4,6 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import type { ComponentType } from 'react';
 import Layout from '../components/Layout';
 import CodeBlock from '../components/CodeBlock';
+import BlogImage from '../components/BlogImage';
 
 interface BlogPostProps {
   data: {
@@ -31,6 +32,14 @@ interface BlogPostProps {
         title: string;
       };
     } | null;
+    allFile: {
+      nodes: Array<{
+        relativePath: string;
+        childImageSharp?: {
+          gatsbyImageData: any;
+        };
+      }>;
+    };
   };
   children: React.ReactNode;
 }
@@ -38,9 +47,28 @@ interface BlogPostProps {
 const components = {
   pre: (props: any) => <div {...props} />,
   code: (props: any) => <CodeBlock {...props} />,
+  BlogImage: BlogImage,
 } as Record<string, ComponentType<any>>;
 
 const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
+  // Map images by their relative path for easy lookup in MDX
+  const imageMap = Object.fromEntries(
+    (data.allFile?.nodes || [])
+      .filter(node => node.childImageSharp)
+      .map(node => [node.relativePath, node.childImageSharp.gatsbyImageData])
+  );
+
+  // Provide BlogImage with image prop as relativePath, e.g. <BlogImage image={imageMap["my-image.jpg"]} alt="desc" />
+  const mdxComponents = {
+    ...components,
+    BlogImage: (props: any) => {
+      const { image, ...rest } = props;
+      const imgData = typeof image === "string" ? imageMap[image] : image;
+      if (!imgData) return <span style={{color:'red'}}>Image not found: {image}</span>;
+      return <BlogImage image={imgData} {...rest} />;
+    },
+  };
+
   const { mdx: post, previous, next } = data;
 
   return (
@@ -53,7 +81,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
           </p>
         </header>
 
-        <MDXProvider components={components}>
+        <MDXProvider components={mdxComponents}>
           {children}
         </MDXProvider>
 
@@ -112,6 +140,16 @@ export const query = graphql`
       }
       frontmatter {
         title
+      }
+    }
+    allFile(
+      filter: { sourceInstanceName: { eq: "images" } }
+    ) {
+      nodes {
+        relativePath
+        childImageSharp {
+          gatsbyImageData(width: 900, placeholder: BLURRED)
+        }
       }
     }
   }
