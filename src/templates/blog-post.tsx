@@ -63,8 +63,16 @@ const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
     ...components,
     BlogImage: (props: any) => {
       const { image, ...rest } = props;
+      // If image is a string and ends with .gif, pass it directly to BlogImage
+      if (typeof image === 'string' && image.toLowerCase().endsWith('.gif')) {
+        return <BlogImage image={image} {...rest} />;
+      }
+      // Otherwise, try to look up in Gatsby image map
       const imgData = typeof image === "string" ? imageMap[image] : image;
-      if (!imgData) return <span style={{color:'red'}}>Image not found: {image}</span>;
+      if (!imgData) {
+        // Only show error for missing static images (not GIFs)
+        return <span style={{color:'red'}}>Image not found: {image}</span>;
+      }
       return <BlogImage image={imgData} {...rest} />;
     },
   };
