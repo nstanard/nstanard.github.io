@@ -11,6 +11,7 @@ interface BlogIndexProps extends PageProps {
           title: string;
           date: string;
           description: string;
+          published?: boolean;
         };
         fields: {
           slug: string;
@@ -21,7 +22,8 @@ interface BlogIndexProps extends PageProps {
 }
 
 const BlogIndex: React.FC<BlogIndexProps> = ({ data }) => {
-  const posts = data.allMdx.nodes;
+  // Only show posts where published !== false (default to true if missing)
+  const posts = data.allMdx.nodes.filter(post => post.frontmatter.published !== false);
 
   return (
     <Layout>
@@ -73,6 +75,7 @@ export const query = graphql`
           title
           date(formatString: "MMMM DD, YYYY")
           description
+          published
         }
         fields {
           slug

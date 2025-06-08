@@ -21,7 +21,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Blog', path: '/blog' },
+    // dont show the blog page in our navigation... just use blog pages to link from portfilio to blog posts
+    // { name: 'Blog', path: '/blog' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Resume', path: '/resume' },
   ];
