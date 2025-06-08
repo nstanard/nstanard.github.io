@@ -37,7 +37,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('Error loading MDX result', result.errors);
   }
 
+            // frontmatter {
+          //   hideFromBlogList
+          // }
   const posts = result.data.allMdx.nodes;
+  // const posts = result.data.allMdx.nodes.filter(
+  //   post => !post.frontmatter.hideFromBlogList
+  // );
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {

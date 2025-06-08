@@ -58,7 +58,8 @@ const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
         </MDXProvider>
 
         <hr className="my-8" />
-        <nav className="flex justify-between">
+        {/* Links to other blog posts.... do we want? */}
+        {/* <nav className="flex justify-between">
           {previous?.fields?.slug && (
             <Link
               to={`/blog${previous.fields.slug}`}
@@ -77,7 +78,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ data, children }) => {
               {next.frontmatter.title} →
             </Link>
           )}
-        </nav>
+        </nav> */}
       </article>
     </Layout>
   );

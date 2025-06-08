@@ -3,14 +3,6 @@ import Layout from '../components/Layout';
 import { Link } from 'gatsby';
 import { FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 
-const colorOptions = [
-  { value: 'emerald', label: 'Emerald', class: 'bg-emerald-500' },
-  { value: 'purple', label: 'Purple', class: 'bg-purple-500' },
-  { value: 'rose', label: 'Rose', class: 'bg-rose-500' },
-  { value: 'amber', label: 'Amber', class: 'bg-amber-500' },
-  { value: 'indigo', label: 'Indigo', class: 'bg-indigo-500' },
-];
-
 const IndexPage = () => {
   return (
     <Layout>

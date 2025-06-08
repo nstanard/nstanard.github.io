@@ -1,24 +1,55 @@
 import * as React from "react"
 import Layout from "../components/Layout"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby";
 
-// You can replace these with your actual projects
 const projects = [
+  // {
+  //   title: "SSO",
+  //   description: "I was the lead developer on the Sparkpost Auth0 integration. I was responsible for the design and implementation of the integration.  ",
+  //   tags: ["React", "TypeScript", "Auth0", "Sparkpost"],
+  //   image: "auth0.png",
+  //   blogPost: "/blog/sso"
+  // },
   {
-    title: "Project 1",
-    description: "Description of your first project. What technologies you used, what problems you solved.",
-    tags: ["React", "TypeScript", "Node.js"],
-    image: "project1.jpg",
-  },
-  {
-    title: "Project 2",
-    description: "Description of your second project. Highlight the key features and your role.",
-    tags: ["Gatsby", "GraphQL", "Tailwind"],
-    image: "project2.jpg",
-  },
-  // Add more projects as needed
+    title: "The Hub",
+    description: "",
+    tags: ["React", "TypeScript", "The Routing Company"],
+    image: "hub.png",
+    blogPost: "/blog/hub"
+  }
 ]
 
 const PortfolioPage = () => {
+  // Query all images in src/images
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: { 
+          sourceInstanceName: { eq: "images" },
+          extension: { regex: "/(jpg|jpeg|png|webp|png)/" }
+        }
+      ) {
+        nodes {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(width: 1200, quality: 90, placeholder: BLURRED)
+          }
+        }
+      }
+    }
+  `);
+
+  // Map images to projects
+  const images = data.allFile.nodes;
+  const projectsWithImages = projects.map(project => {
+    const imageNode = images.find(img => img.relativePath === project.image);
+    return {
+      ...project,
+      imageData: imageNode?.childImageSharp?.gatsbyImageData,
+    };
+  });
+
   return (
     <Layout>
       <div className="py-24 sm:py-32">
@@ -30,17 +61,17 @@ const PortfolioPage = () => {
           </div>
           
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            {projects.map((project, index) => (
+            {projectsWithImages.map((project, index) => (
               <article key={index} className="flex flex-col items-start bg-white dark:bg-dark-card rounded-lg shadow-lg overflow-hidden">
                 <div className="w-full">
-                  {/* Replace with your actual project images */}
                   <div className="h-48 w-full bg-gray-200 dark:bg-gray-700">
-                    {/* You'll need to add your project images to the src/images directory */}
-                    {/* <StaticImage
-                      src="../images/project1.jpg"
-                      alt={project.title}
-                      className="h-48 w-full object-cover"
-                    /> */}
+                    {project.imageData && (
+                      <GatsbyImage
+                        image={project.imageData}
+                        alt={project.title}
+                        className="h-48 w-full object-cover"
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="max-w-xl p-6">
@@ -57,8 +88,8 @@ const PortfolioPage = () => {
                     </div>
                   </div>
                   <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-dark-text group-hover:text-primary-600">
-                      <a href="#">
+                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-dark-text group-hover:underline">
+                      <a href={project.blogPost}>
                         <span className="absolute inset-0" />
                         {project.title}
                       </a>
@@ -69,7 +100,7 @@ const PortfolioPage = () => {
                   </div>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href={project.blogPost}
                       className="text-sm font-semibold leading-6 text-primary-600 dark:text-primary-400 hover:text-primary-500"
                     >
                       View Project <span aria-hidden="true">→</span>
