@@ -1,0 +1,26 @@
+/* PrismJS Default Theme */
+/* You can customize this or use a different PrismJS theme if you like */
+@import url('https://unpkg.com/prismjs@1.29.0/themes/prism-okaidia.css');
+
+/* Custom overrides for better dark mode integration */
+code[class*="language-"],
+pre[class*="language-"] {
+  background: #18181b !important; /* Tailwind's zinc-900, matches many dark UIs */
+  color: #e5e7eb !important;      /* Tailwind's zinc-200 */
+  border-radius: 0.5em;
+  font-size: 1em;
+  box-shadow: none;
+}
+
+pre[class*="language-"] {
+  padding: 1.25em 1em;
+  margin: 1.5em 0;
+  overflow: auto;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #a1a1aa;
+}
