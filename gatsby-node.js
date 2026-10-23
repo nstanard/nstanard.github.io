@@ -28,6 +28,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           internal {
             contentFilePath
           }
+          frontmatter {
+            published
+          }
         }
       }
     }
@@ -37,13 +40,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('Error loading MDX result', result.errors);
   }
 
-            // frontmatter {
-          //   hideFromBlogList
-          // }
-  const posts = result.data.allMdx.nodes;
-  // const posts = result.data.allMdx.nodes.filter(
-  //   post => !post.frontmatter.hideFromBlogList
-  // );
+  // Only build posts where published !== false (same rule as the blog list).
+  const posts = result.data.allMdx.nodes.filter(
+    post => post.frontmatter.published !== false
+  );
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
@@ -60,5 +60,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       });
     });
+  }
+};
+
+// Pages under src/pages that should not be built or served right now.
+const HIDDEN_PAGES = ['/portfolio/'];
+
+exports.onCreatePage = ({ page, actions }) => {
+  if (HIDDEN_PAGES.includes(page.path)) {
+    actions.deletePage(page);
   }
 };

@@ -23,7 +23,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     { name: 'Home', path: '/' },
     // dont show the blog page in our navigation... just use blog pages to link from portfilio to blog posts
     // { name: 'Blog', path: '/blog' },
-    { name: 'Portfolio', path: '/portfolio' },
+    // portfolio hidden until it has real content (the Hub write-up is still placeholder text)
+    // { name: 'Portfolio', path: '/portfolio' },
     { name: 'Resume', path: '/resume' },
   ];
 
