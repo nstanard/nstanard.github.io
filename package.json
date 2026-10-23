@@ -10,11 +10,12 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build && node scripts/resume-pdf.mjs",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy:public": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy:main": "gatsby build && gh-pages -d public -b main"
+    "deploy:main": "gatsby build && gh-pages -d public -b main",
+    "resume:pdf": "node scripts/resume-pdf.mjs"
   },
   "license": "0BSD",
   "dependencies": {
@@ -48,6 +49,7 @@
     "postcss": "^8.4.31",
     "postcss-nested": "^7.0.2",
     "postcss-normalize": "^13.0.1",
+    "puppeteer-core": "^24.43.1",
     "tailwindcss": "^3.4.1"
   }
 }
