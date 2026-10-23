@@ -6,7 +6,7 @@ const ResumePage = () => {
     {
       company: "The Routing Company",
       companyUrl: "https://theroutingcompany.com",
-      position: "Staff Software Engineer",
+      position: "Principal Software Engineer",
       period: "September 2022 - Present, Remote",
       description: "The Routing Company, a global SaaS company, provides software to transit companies to streamline dispatcher, driver, and rider operational excellence.",
       achievements: [
